@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Flairbnb</h1>
+  <h2>Put some flair in your stay!</h2>
+</div>
+
+
+<div id="flats" >
+  <% @flats.each do |flat| %>
+    <div class="card-trip">
+      <img src="https://images.unsplash.com/photo-1464890100898-a385f744067f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="nice groovy flat"/>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= flat.name %></h2>
+          <p><%= flat.description %></p>
+        </div>
+        <h2 class="card-trip-pricing icons"><i class="fa-solid fa-bed"></i><%= flat.number_of_guests %></h2>
+        <h2 class="card-trip-pricing icons"><i class="fa-solid fa-dollar-sign"></i><%= flat.price_per_night %></h2>
+      </div>
+    </div>
+  <% end %>
+</div>
